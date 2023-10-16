@@ -11,6 +11,7 @@
 # result = find_average(my_list)
 # print(f"The average of the numbers containing in the list is : {result}")
 
+
 """
 2. Create a function to Count the Occurrences of a Character in a String.
 """
@@ -25,17 +26,33 @@
 # result = count_char(string1, char1)
 # print(f"There are {result} no.s of '{char1}' in '{string1}'")
 
+
 """
 3. Create a function to remove duplicates from a given list.
 """
-def rev_dup(list1):
-    list2=[]
-    for dup_num in list1:
-        if dup_num not in list2:
-            list2.append(dup_num)
-    return list2
-list_input = [2,5,9,8,3,6,5,8,9]
-result_list =rev_dup(list_input)
+# def rev_dup(list1):
+#     list2=[]
+#     for dup_num in list1:
+#         if dup_num not in list2:
+#             list2.append(dup_num)
+#     return list2
+# list_input = [2,5,9,8,3,6,5,8,9]
+# result_list =rev_dup(list_input)
 
-print(f"The final list after removing duplicates is : {result_list}")
+# print(f"The final list after removing duplicates is : {result_list}")
 
+
+"""
+4. Calculate the nth term of fibonacci number using recursive function.
+"""
+def nth_fibo(num):
+    if num==1:
+        return 0
+    elif num ==2:
+        return 1
+    else:
+        return nth_fibo(num-1) + nth_fibo(num-2)
+n_term = int(input("Enter your desired n_term: "))
+result = nth_fibo(n_term)
+print(f"The {n_term}th term of the fibonacci series is {result}")
+    
