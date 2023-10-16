@@ -14,13 +14,28 @@
 """
 2. Create a function to Count the Occurrences of a Character in a String.
 """
-def count_char(string_input, char_sought):
-    count=0
-    for char in string_input:
-        if char ==char_sought:
-            count+=1
-    return count
-string1 = input("Please input your string: ")
-char1 = input('Enter your desired character: ')
-result = count_char(string1, char1)
-print(f"There are {result} no.s of '{char1}' in '{string1}'")
+# def count_char(string_input, char_sought):
+#     count=0
+#     for char in string_input:
+#         if char ==char_sought:
+#             count+=1
+#     return count
+# string1 = input("Please input your string: ")
+# char1 = input('Enter your desired character: ')
+# result = count_char(string1, char1)
+# print(f"There are {result} no.s of '{char1}' in '{string1}'")
+
+"""
+3. Create a function to remove duplicates from a given list.
+"""
+def rev_dup(list1):
+    list2=[]
+    for dup_num in list1:
+        if dup_num not in list2:
+            list2.append(dup_num)
+    return list2
+list_input = [2,5,9,8,3,6,5,8,9]
+result_list =rev_dup(list_input)
+
+print(f"The final list after removing duplicates is : {result_list}")
+
