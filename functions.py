@@ -45,14 +45,28 @@
 """
 4. Calculate the nth term of fibonacci number using recursive function.
 """
-def nth_fibo(num):
-    if num==1:
-        return 0
-    elif num ==2:
-        return 1
+# def nth_fibo(num):
+#     if num==1:
+#         return 0
+#     elif num ==2:
+#         return 1
+#     else:
+#         return nth_fibo(num-1) + nth_fibo(num-2)
+# n_term = int(input("Enter your desired n_term: "))
+# result = nth_fibo(n_term)
+# print(f"The {n_term}th term of the fibonacci series is {result}")
+
+
+"""
+5. Calculate the sum of digits of a given number using a recursive function.
+"""
+def sum_digits(num):
+    if num<10:
+        return num
     else:
-        return nth_fibo(num-1) + nth_fibo(num-2)
-n_term = int(input("Enter your desired n_term: "))
-result = nth_fibo(n_term)
-print(f"The {n_term}th term of the fibonacci series is {result}")
-    
+        last_digit = num%10
+        rem_digit = num//10
+        return last_digit + sum_digits(rem_digit)
+number = int(input("Enter your desired number: "))
+result = sum_digits(number)
+print(f"Sum of digits of {number} is {result}")
